@@ -8,7 +8,7 @@
  *
  * @link   github.com/vvanhala/abitti-studentlist-filter
  * @author Valtteri Vanhala
- * @since  19.12.2019
+ * December 2019
  */
 
 /**
@@ -35,7 +35,8 @@
  *  Hide all table rows initially, then traverse through all table  
  *  cells and if content matches input filter then show current row.
  *  Adapted from: https://stackoverflow.com/a/51187579
-*/----------------------------------------------------------------
+ * ----------------------------------------------------------------
+ */
 function filterStudents() {
   var myinput, filter, table, tr, td, i;
   myinput = document.getElementById("myInput");
@@ -63,10 +64,10 @@ function filterStudents() {
   }
 }
 
-/*--------------------------------------------------------------
+/* --------------------------------------------------------------
  *  Add the input field on the screen just above the student list
-*/--------------------------------------------------------------
-
+ * --------------------------------------------------------------
+ */
 //Select parent element where the input field will be placed
 var parent = document.getElementById("exam-instructions"); 
 
@@ -81,10 +82,10 @@ input.setAttribute('onkeyup', 'filterStudents()');
 // Create textfield at the end of exam-instructions-div
 parent.appendChild(input); 
 
-/*----------------------------------------------------------------------------------
+/* ----------------------------------------------------------------------------------
  *  The student list table is constantly changing, so a mutation observer is needed
-*/----------------------------------------------------------------------------------
-
+ * ----------------------------------------------------------------------------------
+ */
 // Select the node that will be observed for mutations
 // exam-stats is a parent to students-and-answers -table
 var targetNode = document.getElementById('exam-stats');
